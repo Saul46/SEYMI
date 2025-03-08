@@ -75,7 +75,7 @@ function App() {
                 Ofrecemos servicios de alta calidad en venta, renta y mantenimiento de montacargas para optimizar sus operaciones.
               </p>
             </div>
-            <div className="md:w-1/2">
+            <div className="md:w-1/4">
               <img src="/src/imgs/Logo 1.png" alt="SEYMI Logo" className="max-w-full h-auto" />
             </div>
           </div>
@@ -111,7 +111,7 @@ function App() {
                       <img
                         src={service.image}
                         alt={service.title}
-                        className="w-full h-48 object-cover rounded-lg mb-4"
+                        className="w-160 h-60 object-cover rounded-lg mb-4"
                       />
                       <p className="text-gray-600 mb-4">{service.description}</p>
                       <p className="text-gray-700">{service.additionalInfo}</p>

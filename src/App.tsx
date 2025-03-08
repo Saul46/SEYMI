@@ -18,29 +18,44 @@ function App() {
     {
       icon: Truck,
       title: 'Venta y Renta de Montacargas',
-      description:
-        'Amplia gama de montacargas nuevos y usados para satisfacer sus necesidades.',
-      additionalInfo:
-        'Ofrecemos una amplia variedad de montacargas para diferentes necesidades industriales.',
-      image: '/src/imgs/montacargas.jpg',
+      description: 'Amplia gama de montacargas nuevos y usados para satisfacer sus necesidades.',
+      additionalInfo: 'Ofrecemos una amplia variedad de montacargas para diferentes necesidades industriales.',
+      image: '/src/imgs/Modelos.png',
     },
     {
       icon: Shield,
       title: 'Programas de Mantenimiento Preventivo y Correctivo',
-      description:
-        'Servicio técnico especializado para mantener su equipo en óptimas condiciones.',
-      additionalInfo:
-        'Mantenimiento preventivo y correctivo. Técnicos certificados. Repuestos originales. Diagnóstico computarizado. Atención de emergencias 24/7.',
+      description: 'Servicio técnico especializado para mantener su equipo en óptimas condiciones.',
+      additionalInfo: 'Mantenimiento preventivo y correctivo. Técnicos certificados. Repuestos originales. Diagnóstico computarizado. Atención de emergencias 24/7.',
       image: '/src/imgs/mantenimiento.jpg',
     },
     {
       icon: DollarSign,
       title: 'Venta de Refacciones y Componentes de Maquinaria',
-      description:
-        'Los mejores productos al menor precio y la mas alta calidad',
-      additionalInfo:
-        'Amplio inventario de refacciones originales y componentes de alta calidad para todo tipo de maquinaria industrial.',
-      image: '/src/imgs/refacciones.jpg',
+      description: 'Los mejores productos al menor precio y la mas alta calidad',
+      additionalInfo: 'Amplio inventario de refacciones originales y componentes de alta calidad para todo tipo de maquinaria industrial.',
+      image: '/src/imgs/Refacciones.png',
+    },
+    {
+      icon: Shield,
+      title: 'Mantenimientos Industriales',
+      description: 'Servicios especializados de mantenimiento industrial.',
+      additionalInfo: 'Ofrecemos servicios completos de mantenimiento industrial con personal altamente capacitado y herramientas especializadas.',
+      image: '/src/imgs/mantenimiento-industrial.jpg',
+    },
+    {
+      icon: Drill,
+      title: 'Tratamiento y Soluciones para Pisos Industriales',
+      description: 'Venta de pintura epóxica, Sello epóxico, Piso epóxico, Tratamiento y reparación de juntas de concreto',
+      additionalInfo: 'Soluciones integrales para pisos industriales, incluyendo instalación, mantenimiento y reparación con los más altos estándares de calidad.',
+      image: '/src/imgs/pisos.webp',
+    },
+    {
+      icon: Package,
+      title: 'Fabricación y Colocación de Racks Industriales',
+      description: '',
+      additionalInfo: 'Diseño, fabricación e instalación de sistemas de almacenamiento industrial personalizados según sus necesidades específicas.',
+      image: '/src/imgs/racks-industriales.webp',
     },
   ];
 
@@ -57,16 +72,11 @@ function App() {
                 Servicios Electromecánicos y Métodos Integrales
               </h1>
               <p className="text-xl mb-8">
-                Ofrecemos servicios de alta calidad en venta, renta y
-                mantenimiento de montacargas para optimizar sus operaciones.
+                Ofrecemos servicios de alta calidad en venta, renta y mantenimiento de montacargas para optimizar sus operaciones.
               </p>
             </div>
             <div className="md:w-1/2">
-              <img
-                src="/src/imgs/Logo 1.png"
-                alt="SEYMI Logo"
-                className="max-w-full h-auto"
-              />
+              <img src="/src/imgs/Logo 1.png" alt="SEYMI Logo" className="max-w-full h-auto" />
             </div>
           </div>
         </div>
@@ -79,22 +89,10 @@ function App() {
             Nuestros Servicios
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <img
-              src="/src/imgs/Logo 1.png"
-              className="w-full h-48 object-contain"
-            />
-            <img
-              src="/src/imgs/Logo 2.0.jpg"
-              className="w-full h-48 object-contain"
-            />
-            <img
-              src="/src/imgs/Logo 3.png"
-              className="w-full h-48 object-contain"
-            />
-            <img
-              src="/src/imgs/Logo 4.0.jpg"
-              className="w-full h-48 object-contain"
-            />
+            <img src="/src/imgs/Logo 1.png" className="w-full h-48 object-contain" />
+            <img src="/src/imgs/Logo 2.0.jpg" className="w-full h-48 object-contain" />
+            <img src="/src/imgs/Logo 3.png" className="w-full h-48 object-contain" />
+            <img src="/src/imgs/Logo 4.0.jpg" className="w-full h-48 object-contain" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
@@ -109,80 +107,25 @@ function App() {
                   {hoveredService === index ? (
                     <div className="flex flex-col h-full">
                       <service.icon className="w-12 h-12 text-[#722F37] mb-4" />
-                      <h3 className="text-xl font-semibold mb-3">
-                        {service.title}
-                      </h3>
+                      <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
                       <img
                         src={service.image}
                         alt={service.title}
                         className="w-full h-48 object-cover rounded-lg mb-4"
                       />
-                      <p className="text-gray-600 mb-4">
-                        {service.description}
-                      </p>
+                      <p className="text-gray-600 mb-4">{service.description}</p>
                       <p className="text-gray-700">{service.additionalInfo}</p>
                     </div>
                   ) : (
                     <div>
                       <service.icon className="w-12 h-12 text-[#722F37] mb-4" />
-                      <h3 className="text-xl font-semibold mb-3">
-                        {service.title}
-                      </h3>
+                      <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
                       <p className="text-gray-600">{service.description}</p>
                     </div>
                   )}
                 </div>
               </div>
             ))}
-            <div
-              className="relative bg-white rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105"
-              style={{ height: hoveredService === 3 ? '500px' : '200px' }}
-              onMouseEnter={() => setHoveredService(3)}
-              onMouseLeave={() => setHoveredService(null)}
-            >
-              <div className="p-6 h-full">
-                <Shield className="w-12 h-12 text-[#722F37] mb-4" />
-                <h3 className="text-xl font-semibold mb-3">
-                  Mantenimientos Industriales
-                </h3>
-                <p className="text-gray-600">
-                  Servicios especializados de mantenimiento industrial.
-                </p>
-              </div>
-            </div>
-            <div
-              className="relative bg-white rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105"
-              style={{ height: hoveredService === 4 ? '500px' : '200px' }}
-              onMouseEnter={() => setHoveredService(4)}
-              onMouseLeave={() => setHoveredService(null)}
-            >
-              <div className="p-6 h-full">
-                <Drill className="w-12 h-12 text-[#722F37] mb-4" />
-                <h3 className="text-xl font-semibold mb-3">
-                  Tratamiento y Soluciones para Pisos Industriales
-                </h3>
-                <p className="text-gray-600">
-                  Venta de pintura epóxica, Sello epóxico, Piso epóxico,
-                  Tratamiento y reparación de juntas de concreto
-                </p>
-              </div>
-            </div>
-            <div
-              className="relative bg-white rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105"
-              style={{ height: hoveredService === 5 ? '500px' : '200px' }}
-              onMouseEnter={() => setHoveredService(5)}
-              onMouseLeave={() => setHoveredService(null)}
-            >
-              <div className="p-6 h-full">
-                <Package className="w-12 h-12 text-[#722F37] mb-4" />
-                <h3 className="text-xl font-semibold mb-3">
-                  Fabricación y Colocación de Racks Industriales
-                </h3>
-                <p className="text-gray-600">
-                  Soluciones flexibles de alquiler para proyectos temporales.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -193,33 +136,23 @@ function App() {
           <h2 className="text-3xl font-bold text-center mb-12 text-[#722F37]">
             Nuestras Especialidades
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-3">
-                Montacargas eléctricos
-              </h3>
-              <h3 className="text-xl font-semibold mb-3">
-                Montacargas de combustión
-              </h3>
-              <h3 className="text-xl font-semibold mb-3">
-                Patines hidráulicos
-              </h3>
-              <h3 className="text-xl font-semibold mb-3">Baterías</h3>
-              <h3 className="text-xl font-semibold mb-3">
-                Patinetas eléctricas
-              </h3>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-3">Cargadores</h3>
-              <h3 className="text-xl font-semibold mb-3">Cambia pilas</h3>
-              <h3 className="text-xl font-semibold mb-3">Rampas</h3>
-              <h3 className="text-xl font-semibold mb-3">Cortinas</h3>
-              <h3 className="text-xl font-semibold mb-3">
-                Colocación de pisos epóxicos
-              </h3>
-              <h3 className="text-xl font-semibold mb-3">
-                Fabricación y colocación de racks industriales
-              </h3>
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold mb-3">• Montacargas eléctricos</h3>
+                <h3 className="text-xl font-semibold mb-3">• Montacargas de combustión</h3>
+                <h3 className="text-xl font-semibold mb-3">• Patines hidráulicos</h3>
+                <h3 className="text-xl font-semibold mb-3">• Baterías</h3>
+                <h3 className="text-xl font-semibold mb-3">• Patinetas eléctricas</h3>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-3">• Cargadores</h3>
+                <h3 className="text-xl font-semibold mb-3">• Cambia pilas</h3>
+                <h3 className="text-xl font-semibold mb-3">• Rampas</h3>
+                <h3 className="text-xl font-semibold mb-3">• Cortinas</h3>
+                <h3 className="text-xl font-semibold mb-3">• Colocación de pisos epóxicos</h3>
+                <h3 className="text-xl font-semibold mb-3">• Fabricación y colocación de racks industriales</h3>
+              </div>
             </div>
           </div>
         </div>
@@ -297,9 +230,7 @@ function App() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-5 h-5" />
-                  <span>
-                    Fresno 22, San Jose Puente Grande, 54834 Cuautitlan, México
-                  </span>
+                  <span>Fresno 22, San Jose Puente Grande, 54834 Cuautitlan, México</span>
                 </div>
               </div>
             </div>
